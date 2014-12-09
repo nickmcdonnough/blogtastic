@@ -98,11 +98,6 @@ class Blogtastic::Server < Sinatra::Application
     erb :'posts/post'
   end
 
-  # new comment page 
-  get '/posts/:post_id/comments/new' do
-    erb :'comments/new'
-  end
-
   # create a new comment on a post
   post '/posts/:post_id/comments' do
     comment = {
@@ -120,10 +115,5 @@ class Blogtastic::Server < Sinatra::Application
     db = Blogtastic.create_db_connection 'blogtastic'
     Blogtastic::PostsRepo.destroy db, params[:id]
     redirect to '/posts'
-  end
-
-  # delete a comment
-  delete '/posts/:post_id/comments/:id' do
-    redirect to '/posts' + params[:post_id]
   end
 end
