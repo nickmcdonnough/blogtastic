@@ -1,0 +1,6 @@
+<form action='/posts' method='post'>
+  <input type='text' placeholder='Title' name='title'>
+  <input type='text' placeholder='Content' name='content'>
+  <input type='hidden' name='user_id' value='<%= @current_user %>'>
+  <input type='submit' value='Submit'>
+</form>

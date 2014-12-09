@@ -1,0 +1,23 @@
+<!doctype html>
+<head>
+  <title>Blogtastic!</title>
+  <link rel="stylesheet" href="/stylesheets/base.css">
+  <link rel="stylesheet" href="/stylesheets/skeleton.css">
+  <link rel="stylesheet" href="/stylesheets/layout.css">
+</head>
+<body>
+  <div class="container">
+    <div class='eight columns omega'>
+      <h1><a href='/posts'>Blogtastic!</a></h1>
+    </div>
+    <div class='eight columns omega' align='right'>
+      <% if @current_user['name'] == 'anonymous' %>
+        <a href='/signin'>Sign In</a> or <a href='/signup'>Sign Up</a>
+      <% else %>
+        Signed in as <%= @current_user['name'] %>
+      <% end %>
+    </div>
+    <%= yield %>
+  </div>
+</body>
+</html>
