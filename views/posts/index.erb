@@ -1,0 +1,16 @@
+<div class="sixteen columns">
+  <h2 class="strapline">All Posts! <a href='/posts/new' style='font-size: 24px'>[new]</a></h2>
+</div>
+<div class="grid infinite">
+  <% @posts.each do |post| %>
+    <div class="four columns grid-item">
+      <a href="/posts/<%= post['id'] %>">
+        <img src='/images/post_it.jpg' class='scale-with-grid'>
+      </a>
+      <div class="caption">
+        <a href="/posts/<%= post['id'] %>"><%= post['title'] %></a>
+        <span class="artist"><%= post['content'].chars.first(15).join + '...' if post['content'] %></span>
+      </div>
+    </div>
+  <% end %>
+</div>

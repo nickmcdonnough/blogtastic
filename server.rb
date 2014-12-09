@@ -3,7 +3,7 @@ require 'sinatra/reloader'
 require 'pry-byebug'
 require 'rack-flash'
 
-require_relative '../lib/blogtastic.rb'
+require_relative 'lib/blogtastic.rb'
 
 class Blogtastic::Server < Sinatra::Application
   configure do
