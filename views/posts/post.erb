@@ -8,7 +8,7 @@
     <h4>Comments section</h4>
     <form action="/posts/<%= @post['id'] %>/comments" method='post'>
       <input type='text' placeholder='New comment' name='content'>
-      <input type='hidden' name='user_id' value='<%= @current_user %>'>
+      <input type='hidden' name='user_id' value='<%= @current_user['id'] %>'>
       <input type='submit' value='Submit'>
     </form>
   

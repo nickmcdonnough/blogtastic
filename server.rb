@@ -92,7 +92,7 @@ class Blogtastic::Server < Sinatra::Application
 
     @comments.map do |c|
       comment_user = Blogtastic::UsersRepo.find db, c['user_id']
-      c['user'] = comment_user['name']
+      c['user'] = comment_user['username']
     end
 
     erb :'posts/post'
