@@ -42,7 +42,7 @@ module Blogtastic
 
   def self.seed_db(db)
     db.exec <<-SQL
-      INSERT INTO users (name, password) values ('anonymous', 'anonymous', 'anon@ymous.gov')
+      INSERT INTO users (username, password) values ('anonymous', 'anonymous')
     SQL
   end
 
