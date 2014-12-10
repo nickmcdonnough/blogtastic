@@ -11,7 +11,7 @@ In this exercise you will...
 2. Use rack's `session` hash to allow users to stay logged in
 
 ----
-## Setup
+## Steps
 
 1. Clone down this repo
 2. Bundle install
