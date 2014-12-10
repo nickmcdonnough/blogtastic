@@ -11,10 +11,10 @@
       <h1><a href='/posts'>Blogtastic!</a></h1>
     </div>
     <div class='eight columns omega' align='right'>
-      <% if @current_user['name'] == 'anonymous' %>
+      <% if @current_user['username'] == 'anonymous' %>
         <a href='/signin'>Sign In</a> or <a href='/signup'>Sign Up</a>
       <% else %>
-        Signed in as <%= @current_user['name'] %>
+        Signed in as <%= @current_user['username'] %>
       <% end %>
     </div>
     <%= yield %>
