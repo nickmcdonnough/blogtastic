@@ -12,7 +12,7 @@ class Blogtastic::Server < Sinatra::Application
   end
 
   before do
-    if session['user_name']
+    if session['user_id']
       user_id = session['user_id']
       db = Blogtastic.create_db_connection 'blogtastic'
       @current_user = Blogtastic::UsersRepo.find db, user_id
