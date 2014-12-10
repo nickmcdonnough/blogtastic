@@ -22,9 +22,8 @@ module Blogtastic
     db.exec <<-SQL
       CREATE TABLE IF NOT EXISTS users(
         id SERIAL PRIMARY KEY,
-        name VARCHAR,
-        password VARCHAR,
-        email VARCHAR
+        username VARCHAR,
+        password VARCHAR
       );
       CREATE TABLE IF NOT EXISTS posts(
         id SERIAL PRIMARY KEY,
