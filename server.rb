@@ -27,6 +27,9 @@ class Blogtastic::Server < Sinatra::Application
   # DO NOT EDIT ANYTHING ABOVE THIS AREA
   ###################################################################
 
+  # Refer to `lib/blogtastic/repos/users_repo.rb` to see how you can
+  # save and find users to handle the authentication process.
+
   get '/signup' do
     # TODO: render template with form for user to sign up
   end
