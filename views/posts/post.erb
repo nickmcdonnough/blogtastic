@@ -2,6 +2,8 @@
   <div class='eight columns omega aside-container'>
     <h4><%= @post['title'] %> by <%= @user['username'] %></h4>
     <%= @post['content'] %>
+    <br>
+     <a href="/posts/<%= @post['id'] %>/edit" >Edit your post content here</a>
   </div>
   
   <div class='eight columns omega aside-container'>
@@ -11,9 +13,12 @@
       <input type='hidden' name='user_id' value='<%= @current_user['id'] %>'>
       <input type='submit' value='Submit'>
     </form>
-  
-    <% @comments.each do |comment| %>
+      <% @comments.each do |comment| %>
+      <a href="/comments/<%= comment['id'] %>/edit" >Edit comment here</a>
       <p><%= comment['user'] %>: <%= comment['content'] %></p>
     <% end %>
+      
+
   </div>
+
 </div><!-- end sixteen columnns -->
