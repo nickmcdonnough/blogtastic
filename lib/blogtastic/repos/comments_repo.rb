@@ -26,6 +26,13 @@ module Blogtastic
       end
     end
 
+    def self.update db, comment_data
+        if comment_data['id']
+        result= db.exec("UPDATE comments SET content = $1  WHERE id = $2 returning *",[comment_data['content'],comment_data['id']])[0]     
+      end
+      result
+    end
+    
     def self.destroy db, id
       sql = %q[DELETE FROM comments where id = $1]
       db.exec(sql, [id])

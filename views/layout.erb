@@ -15,6 +15,7 @@
         <a href='/signin'>Sign In</a> or <a href='/signup'>Sign Up</a>
       <% else %>
         Signed in as <%= @current_user['username'] %>
+        <a href="/logout">Logout</a>
       <% end %>
     </div>
     <%= yield %>

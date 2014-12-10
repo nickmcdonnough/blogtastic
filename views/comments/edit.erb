@@ -1,0 +1,9 @@
+<div class='sixteen columns'>
+
+  <form method="post" action="/comments/<%= @id %>"> 
+      <input type="hidden" name="_method" value="put">
+       <input type='text' placeholder='Edit your comment' name='content'>
+      <button type="submit">Update</button>
+  </form>
+
+</div>
