@@ -17,7 +17,7 @@ class Blogtastic::Server < Sinatra::Application
       db = Blogtastic.create_db_connection 'blogtastic'
       @current_user = Blogtastic::UsersRepo.find db, user_id
     else
-      @current_user = {'name' => 'anonymous', 'id' => 1}
+      @current_user = {'username' => 'anonymous', 'id' => 1}
     end
   end
 
