@@ -36,6 +36,9 @@ class Blogtastic::Server < Sinatra::Application
 
   post '/signup' do
     # TODO: save user's info to db and create session
+    # Create the session by adding a new key value pair to the
+    # session hash. The key should be 'user_id' and the value
+    # should be the user id of the user who was just created.
   end
 
   get '/signin' do
@@ -44,6 +47,9 @@ class Blogtastic::Server < Sinatra::Application
 
   post '/signin' do
     # TODO: validate users credentials and create session
+    # Create the session by adding a new key value pair to the
+    # session hash. The key should be 'user_id' and the value
+    # should be the user id of the user who just logged in.
   end
 
   get '/logout' do
